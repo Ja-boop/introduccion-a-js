@@ -60,6 +60,9 @@ function promedioEdad(numbers) {
 
 botonIngreso.onclick = function () {
 
+    let inputs = document.getElementsByClassName('reset-form');
+        while (inputs.length) inputs[0].parentNode.removeChild(inputs[0]);
+
     for (i = 0; i < cantitadDeFamiliares.value; i++) {
         crearFormulario(cantitadDeFamiliares[i]);
 
@@ -83,15 +86,7 @@ botonIngreso.onclick = function () {
         document.querySelector('#resultados').innerText = `La edad mas baja y la mas alta son: ${edadMasBajaYAlta(contenedorArray)}`
         document.querySelector('#promedio').innerText = `El promedio de edad de tu familia es de: ${promedioEdad(contenedorArray)}`
 
-        botonReset.onclick = function () {
-            let inputs = document.getElementsByClassName('reset-form');
-            while (inputs.length) inputs[0].parentNode.removeChild(inputs[0]);
-
-            
-
-            return false;
-        }
-
+       
 
 
 
