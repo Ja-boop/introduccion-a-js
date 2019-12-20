@@ -54,11 +54,23 @@
     declaración está compuesto de un "selector" y de un conjunto de reglas de estilo
     visuales. Una declaración se ve así:
     
+        #id
+        .class
+        nombre del tag
+
+        #id {
+            background: red;
+        }
+
+
     [selector] {
       nombre-de-estilo: valor;
       nombre-de-estilo: valor;
       nombre-de-estilo: valor;
     }
+
+
+    
 
     Los selectores especifican sobre que elementos son aplicados los
     estilos visuales.
@@ -125,6 +137,10 @@
 //       Utilizá console.log para ver lo que obtuviste!
 
 
+const nuestroTitulo = document.querySelector('h1')
+console.log(nuestroTitulo);
+console.log(nuestroTitulo.innerText);
+
 
 
 
@@ -147,8 +163,8 @@
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
 
 
-
-
+let mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
 
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
@@ -161,7 +177,11 @@
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
+//Iteracion es como que de una vuelt, hacer un for o un while y por cada vuelta lo pongamos en la consola
 
+for(let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i])
+}
 
 
 
@@ -185,8 +205,9 @@
 // y utilizá console.log para mostrarlo.
 
 
-
-
+//console.log(nuestroTitulo.textContent); //Te muestra todo el texto escrito en HTMLs
+//console.log(nuestroTitulo.innerText); //No te muestra ningun texto que no se muestre en la pagina
+//console.log(body.innerHTML); //Te muestra todo el codigo HTML mas los textos
 
 
 /*
@@ -205,7 +226,8 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
-
+//let nombre = prompt("¿Como te llamas?") 
+//nuestroTitulo.innerText = 'Hola! ' + nombre;
 
 
 
@@ -223,7 +245,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
+document.querySelector('img').src = 'img/kittens.jpeg';
 
 
 
@@ -243,13 +265,14 @@
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
-    nuestroTwitter.style.backgroundColor = 'white';
+    ourTwitter.style.backgroundColor = 'white';
 */
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
 
-
+nuestroTitulo.style.backgroundColor = 'red';
+nuestroTitulo.style.fontSize = '80px';
 
 
 
@@ -265,11 +288,14 @@
 
     Ejemplo:
 
-    const nodoPagina = document.querySelector('body');
-    const nuevoParrafo = document.createElement('p');
-    const textoParrafo = document.createTextNode('Yeeee!');
-    nuevoParrafo.appendChild(textoParrafo);
-    nodoPagina.appendChild(nuevoParrafo);
+    const nodoPagina = document.querySelector('body'); //<body>..........</body> Agarra el node o elemento
+    const nuevoParrafo = document.createElement('p'); //<p>......</p>
+    const textoParrafo = document.createTextNode('Yeeee!'); //"Siiii"
+    nuevoParrafo.appendChild(textoParrafo); <p>Siiiii</p>
+    
+    nodoPagina.appendChild(nuevoParrafo); <body>
+                                            <p>Siiiii</p>   
+                                          </body>
 */
 
 // Tarea: Todavía seguís teniendo a los gatitos en tu pantalla? A mí me gusta el logo y los gatitos.
@@ -279,7 +305,17 @@
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
 
+const nodoPagina = document.querySelector('header')
+const nuevaImg = document.createElement('img')
+nuevaImg.src = 'img/woman_bw.jpg';
 
+nodoPagina.appendChild(nuevaImg)
+
+
+/*El SEO (Search Engine Optimization) Es lo que usa Google (Tiene su propia forma de usarlo que es propiedad
+intelectual de Google) Por ejemplo: Si buscas "Jugueteria" te aparecera la mas relevante a esa palabra clave 
+Por eso hay que escribir HTML adecuado
+*/
 
 
 

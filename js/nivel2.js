@@ -44,7 +44,7 @@
 
 
 
-
+const comidasFavoritas = ['milanesas', 'asado', 'hamburguesas', 'pizzas'];
 
 
 
@@ -64,8 +64,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
-
+console.log(comidasFavoritas.length);
 
 
 
@@ -90,7 +89,8 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
+let tercerItem = comidasFavoritas[2];
+console.log("Tu tercera comida favorita es: " + tercerItem);
 
 
 
@@ -114,6 +114,9 @@
 
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
+
+comidasFavoritas[0] = 'fideos';
+console.log(comidasFavoritas);
 
 
 
@@ -146,14 +149,14 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
+comidasFavoritas.push('Ravioles');
 
 
 
 
 // TAREA: console.log todo el array para verificar.
 
-
+console.log(comidasFavoritas);
 
 
 
@@ -182,9 +185,10 @@
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
-
-
-
+const a = [1, 2, 3];
+console.log(a);
+a[0] = 4;
+console.log(a);
 
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
@@ -199,14 +203,14 @@
 /*
     Bucles
     ======
-    
+
     ¡La gente siempre ha sido perezosa, pero a veces avanza! A nosotros
-    no nos gusta repetir las mismas aburridas acciones una y otra vez, 
+    no nos gusta repetir las mismas aburridas acciones una y otra vez,
     así que buscamos formas de evitarlo.
 
-    La programación es igual. Por ejemplo, si quiero imprimir 10 veces 'JavaScript 
-    es increible!', ¿cuáles son mis opciones?. Por supuesto, puedo escribir 
-    diez líneas de código repitiendo la misma instrucción, pero también 
+    La programación es igual. Por ejemplo, si quiero imprimir 10 veces 'JavaScript
+    es increible!', ¿cuáles son mis opciones?. Por supuesto, puedo escribir
+    diez líneas de código repitiendo la misma instrucción, pero también
     puedo decirle a la computadora que lo repita en lugar de que yo lo escriba 10 veces.
 
     Para esto usamos bucles.
@@ -246,6 +250,12 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+let numero = 10;
+
+while (numero > 1) {
+    numero--;
+}
+
 
 
 
@@ -267,6 +277,10 @@
 */
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
+
+for (i = 3; i <= 22; i = i + 3) {
+    console.log('Hola!' + i);
+}
 
 
 
@@ -296,7 +310,9 @@
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-
+for (let i = 0; i < comidasFavoritas.length; i++) {
+    console.log('Me gustan los ' + comidasFavoritas[i]);
+}
 
 
 
@@ -304,7 +320,7 @@
 /*
     Bucles y Logica
     ===============
-    
+
     Traigamos bucles junto con las declaraciones if / else que aprendimos en
     nivel 1, y hagamos algo interesante.
 
@@ -339,6 +355,45 @@
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
 
+
+function multiploDeTres(numero1) {
+    return numero1 % 3;
+}
+
+function multiploDeCinco(numero1) {
+    return numero1 % 5;
+}
+
+function multiploDeTresyCinco(numero1) {
+    return numero1 % 15;
+}
+
+for (let i = 1; i <= 50; i++) {
+    if (multiploDeTresyCinco(i) === 0) {
+        console.log('FizzBuzz');
+    } else if (multiploDeCinco(i) === 0) {
+        console.log('Buzz');
+    } else if (multiploDeTres(i) === 0) {
+        console.log('Fizz');
+    } else {
+        console.log(i);
+    }
+
+}
+
+/*
+for (let z = 1; z <= 50; z++) {
+   if (z % 5 === 0 && z % 3 === 0) {
+       console.log('FizzBuzz');
+   } else if (z % 5 === 0) {
+       console.log('Buzz');
+   } else if (z % 3 === 0) {
+       console.log('Fizz');
+   } else {
+       console.log(z);
+   }
+}
+*/
 
 
 

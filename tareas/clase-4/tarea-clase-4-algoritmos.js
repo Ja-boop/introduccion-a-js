@@ -9,10 +9,28 @@ usando  elementos de programación simples y clásicos.
 Desafío de programación #1: Imprimí los números del 1 al 10
 
  Resultado: 10 9 8 7 6 5 4 3 2 1
+ 
+
+ for (let i = 1; i <= 10; i++) {
+   console.log(i);
+}
+
+ 
 
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 
  1 3 5 ... 99
+
+*/
+/*
+
+for (i = 1; i <= 100; i = i + 2){
+  console.log(i);
+}
+*/
+
+
+/*
 
 Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
@@ -20,6 +38,82 @@ Desafío de programación #3: Imprimí la tabla de multiplicación del 7
  7x1 = 7
  ...
  7x9 = 63
+
+*/
+/*
+function tablaDeMultiplicacionUno(numero1) {
+  return numero1 * 1;
+}
+
+function tablaDeMultiplicacionDos(numero1) {
+  return numero1 * 2;
+}
+
+function tablaDeMultiplicacionTres(numero1) {
+  return numero1 * 3;
+}
+
+function tablaDeMultiplicacionCuatro(numero1) {
+  return numero1 * 4;
+}
+
+function tablaDeMultiplicacionCinco(numero1) {
+  return numero1 * 5;
+}
+
+function tablaDeMultiplicacionSeis(numero1) {
+  return numero1 * 6;
+}
+
+function tablaDeMultiplicacionSiete(numero1) {
+  return numero1 * 7;
+}
+
+function tablaDeMultiplicacionOcho(numero1) {
+  return numero1 * 8;
+}
+
+function tablaDeMultiplicacionNueve(numero1) {
+  return numero1 * 9;
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionUno(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionDos(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionTres(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionCuatro(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionCinco(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionSeis(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionSiete(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionOcho(i));
+}
+
+for (i = 1; i <= 10; i++) {
+  console.log(tablaDeMultiplicacionNueve(i));
+}
+*/
+/*
 
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
@@ -33,16 +127,53 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  9x9 = 81
 
+
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
 
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
 
+*/
+
+/*const unoAlDiez = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let acumuladorUnoalDiez = 0;
+
+for (i = 0; i < unoAlDiez.length; i++) {
+  acumuladorUnoalDiez = acumuladorUnoalDiez + unoAlDiez[i];
+}
+
+console.log(acumuladorUnoalDiez);
+*/
+/*
+
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
 
+*/
+// const unoAlDiez = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// let acumulador = 1;
+
+// for (i = 0; i < 10; i++) {
+//   acumulador = acumulador * unoAlDiez[i];
+// }
+
+// console.log(acumulador);
+/*
+
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+
+
+
+acumulador = 0;
+
+for (i = 11; i <= 30; i = i + 2) {
+  acumulador = acumulador + i;
+}
+console.log(acumulador);
+
+/*
 
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 

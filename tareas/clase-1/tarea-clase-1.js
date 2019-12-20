@@ -3,7 +3,7 @@
 // Preguntarle estos datos al usuario y guardarlos en 2 variables
 // Ejecutar la función con estos datos
 // Impriman el resultado en la consola
-function calcularEdad(anioActual, anioNacimiento) {
+/*function calcularEdad(anioActual, anioNacimiento) {
     return anioActual - anioNacimiento;
 }
 
@@ -43,11 +43,12 @@ const salarioAnual = Number(prompt('Cuál es tu salario mensual?'));
 console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
 console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
 console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
+*/
 
 /// SCOPE
 
 // Variable hoisting -> izar
-// console.log(hola); //Falla porque no está definida
+//console.log(hola); //Falla porque no está definida
 
 // console.log(mensaje); //No falla, pero muestra undefined... por qué?
 // var mensaje = 'Hola, mundo';
@@ -67,8 +68,8 @@ function pruebaHoisting(){
 //pruebaHoisting();
 */
 
-/*
-var a = 1; //global
+
+/*var a = 1; //global
 let b = 2; //global
 
 function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
@@ -77,6 +78,7 @@ function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
     if(c === 3){
         var e = 5; // por hoisting termina siendo local a la función
         let f = 6; // local al IF
+    
 
         console.log('a dentro del if vale: ' + a); // 1
         console.log('b dentro del if vale: ' + b); // 2
@@ -96,10 +98,20 @@ function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
 
 prueba(3);
 
-console.log('a vale: ' + a); // 1
-console.log('b vale: ' + b); // 2
+//console.log('a vale: ' + a); // 1
+//console.log('b vale: ' + b); // 2
 // console.log('c vale: ' + c); // error
 // console.log('d vale: ' + d); // error
 // console.log('e vale: ' + e); // error
 // console.log('f vale: ' + f); // error
 */
+
+ 
+a = [3, 5, 4, 4, 1, 1, 2, 3]  
+
+function range(numbers) {
+    numbers.sort();
+    return [numbers[0], numbers[numbers.length - 1]];
+}
+
+console.log("El numero mas bajo y mas alto es " + range(a));
